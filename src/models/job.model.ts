@@ -7,7 +7,7 @@ export interface JobInt extends Document{
     cronExpression : string;
     lastRun?: Date | null;
     nextRun?: Date | null;
-    status?: "Scheduled" | "Running" | "Completed" | "Failed";
+    status?: "Scheduled" | "Running" | "Completed";
     createdAt: Date;
     customAttributes?: object;
 }
@@ -18,7 +18,7 @@ const jobSchema = new Schema<JobInt>({
     cronExpression : {type: String, required: true},
     lastRun: {type: Date, default: null},
     nextRun: {type: Date, default: null},
-    status: {type: String, enum : ["Scheduled", "Running", "Completed", "Failed"], default: "Scheduled"},
+    status: {type: String, enum : ["Scheduled", "Running", "Completed"], default: "Scheduled"},
     createdAt: {type: Date, default: Date.now},
     customAttributes: {type: Object}
 })

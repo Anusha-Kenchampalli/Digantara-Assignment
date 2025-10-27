@@ -41,6 +41,10 @@ export const scheduleJob = async (jobId: string, jobName : string, cronExpressio
       nextRun: toIST(nextRun)
     });
 
+     await Job.findByIdAndUpdate(jobId, { 
+      status: "Completed"
+    });
+
   });
 
   task.start();
