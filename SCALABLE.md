@@ -16,3 +16,4 @@ The Scheduler Microservice is designed to be modular, scalable, and production-f
 
 This microservice demonstrates knowledge of backend architecture, cron-based scheduling, distributed caching, and containerized deployment — all essential skills for backend or DevOps roles.
 
+
